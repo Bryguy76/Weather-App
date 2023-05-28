@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  gap: 2rem;
+}
+
+.dayTime {
+  background-image: url("./assets/day.jpg");
+  background-size: contain;
+}
+
+.nightTime {
+  background-image: url("./assets/night.jpg");
+  background-size: contain;
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.cityName {
+  font-size: 3rem;
+}
+
+.temp {
+  font-size: 3rem;
+}
+
+.localle {
+  font-size: 1.5rem;
+}

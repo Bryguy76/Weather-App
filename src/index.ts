@@ -1,6 +1,8 @@
 import { currentWeather, weatherReport } from "./fetchCity";
 import { processCurrent, processForecast } from "./processData";
 import { displayCurrent, displayForecast } from "./displayUpdater";
+import "./reset.css";
+import "./style.css";
 
 const inputCity = document.querySelector("input");
 const submitCity = document.querySelector("button");

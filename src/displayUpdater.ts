@@ -1,15 +1,11 @@
-import day from "./assets/day.jpg";
-import night from "./assets/night.jpg";
-
 export function displayCurrent(input: any, preference: boolean) {
   let backGround: string;
   if (input.is_day == 1) {
-    backGround = "./assets/day.jpg";
+    document.querySelector("body").classList.add("dayTime");
   } else {
-    backGround = "./assets/night.jpg";
+    document.querySelector("body").classList.add("nightTime");
   }
   const container = document.querySelector(".container");
-  //   container.style.backgroundImage = `url(${backGround})`;
   const cityName = document.createElement("h2");
   cityName.classList.add("cityName");
   cityName.textContent = input.name;
