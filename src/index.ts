@@ -6,7 +6,7 @@ import "./style.css";
 
 const inputCity = document.querySelector("input");
 const submitCity = document.querySelector("button");
-const preference = true;
+let preference = true;
 
 let currentResultData: any;
 let forecastResultData: any;
