@@ -1,15 +1,9 @@
-# 🚀 Welcome to your new awesome project!
+# Weather App: Odin Project Javascript Course
 
-This project has been created using **webpack-cli**, you can now run
+Build instructions:
 
 ```
+npm install
 npm run build
+cd dist && live-server
 ```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
