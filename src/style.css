@@ -43,3 +43,14 @@
 .localle {
   font-size: 1.5rem;
 }
+
+.metric {
+  position: absolute;
+  top: 3%;
+  right: 7%;
+  border-radius: 15px;
+  padding: 1rem;
+  border: 1px solid azure;
+  background-color: #343434;
+  cursor: pointer;
+}

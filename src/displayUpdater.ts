@@ -1,7 +1,7 @@
 import { contentWiper } from "./contentWiper";
-
 import { currentWeather, weatherReport } from "./fetchCity";
 import { processCurrent, processForecast } from "./processData";
+import { preference } from "./globals";
 
 export function displayCurrent(input: any, preference: boolean) {
   document.querySelector("body").classList.remove("dayTime");
@@ -24,6 +24,9 @@ export function displayCurrent(input: any, preference: boolean) {
         "
     />
     <button type="button">search</button>
+    <p class="metric">${
+      preference ? "Display Celcius" : "Display Farenheight"
+    }</p>
   `;
   const cityName = document.createElement("h2");
   cityName.classList.add("cityName");
@@ -67,6 +70,20 @@ export function displayCurrent(input: any, preference: boolean) {
         .then((data) => processForecast(data))
         .then((output) => (forecastResultData = output));
       displayForecast(forecastResultData);
+    }
+  });
+
+  const metric = document.querySelector(".metric");
+  metric.addEventListener("click", function () {
+    preference = !preference;
+    if (document.querySelector(".temp")) {
+      if (preference) {
+        metric.textContent = "Display Celcius";
+        temp.textContent = `${Math.trunc(input.farenheight)}° F`;
+      } else {
+        temp.textContent = `${Math.trunc(input.celcius)}° C`;
+        metric.textContent = "Display Farenheight";
+      }
     }
   });
 }
